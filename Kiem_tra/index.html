@@ -7,12 +7,30 @@
     <title>Document</title>
   </head>
   <body>
-    <form id="login" method="get" action="login.php">
+    <form id="login" method="post" action="http://127.0.0.1:5500/login.html">
       <label><b>User Name </b> </label>
       <input type="text" name="Uname" id="usernamee" placeholder="Username" />
       <label><b>Mật khẩu </b> </label>
       <input type="Password" name="Pass" id="matkhau" placeholder="Password" />
-      <button>login</button>
+      <button type="submit" id="btn" onclick="validate()">
+        <a href="http://127.0.0.1:5500/login.html" style="text-decoration: none"
+          >login</a
+        >
+      </button>
     </form>
   </body>
+  <script>
+    var a = document.getElementById("usernamee");
+    var b = document.getElementById("matkhau");
+    var btn = document.getElementById("btn");
+    console.log(a);
+    console.log(b);
+    console.log(c);
+    btn.addEventListener("click", () => {
+      if (a === "admin" && b === "admin") {
+        alert("Đăng nhập thành công");
+        window.location.href("http://127.0.0.1:5500/login.html");
+      }
+    });
+  </script>
 </html>
